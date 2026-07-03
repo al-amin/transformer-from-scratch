@@ -17,7 +17,5 @@ predicting the next one, and repeats that reasoning a few times before making it
    relevant to predicting what comes next.
 4. **[Feed-Forward layer & Transformer Block](transformer-block.md)** — process each
    word's result a bit further on its own, wrapped in residual connections + layer norm.
-5. **Stack blocks** _(coming)_ — repeat attention + feed-forward several times, each
-   pass refining the model's understanding.
-6. **Next-token prediction** _(coming)_ — turn the final vector back into a probability
-   over every possible next character, and pick (or sample) one.
+5. **[Stack blocks + full model + training](gpt-model-and-training.md)** — assemble
+   everything, train it for real, and honestly report what happened.
