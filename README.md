@@ -1,6 +1,6 @@
 # Transformer From Scratch
 
-> Status: 🚧 In progress — Tier 0 foundations project.
+> Status: ✅ Complete — Tier 0 foundations project.
 
 ## Hook
 A GPT-style language model built from first principles — no pre-built transformer library —
@@ -36,10 +36,61 @@ directly, or view it on GitHub, to see the data flow in motion.)
 diagrams?** See [`concepts/`](concepts/README.md).
 
 ## Metrics
-_TBD once training runs — will report loss curves and sample generations, not just claims._
+
+Trained an 824,897-parameter model on Tiny Shakespeare (~1M characters) for 3,000
+iterations on an Apple Silicon Mac (MPS GPU), in **89.4 seconds**.
+
+| | Start (iter 0) | End (iter 3000) |
+|---|---|---|
+| Train loss | 4.3845 | **1.5006** |
+| Validation loss | 4.3870 | **1.6923** |
+
+(Starting loss of ~4.38 matches the theoretical random-guessing baseline of
+`ln(65 characters) ≈ 4.17` — confirms the model started from genuine random weights,
+not a trivial shortcut.)
+
+![Training loss curve](docs/loss_curve.png)
+
+**Sample generation from the trained model** (temperature-free multinomial sampling,
+starting from a newline character):
+
+```
+Have how all Commonten his a proloud.
+
+Romeo in RomeBEet:
+Stand am, cond you thou goods' ranged ear.
+
+LEONTES:
+My pribusiseniss me, shall some.
+Dis may, I mean another will death a headful to thy court you.
+I lo, give so accimpardes uppeaks ouch.
+
+ISABELLA:
+
+Lord Non'never:
+
+WARWICK, HENREY:
+You you
+```
+
+Not coherent English, but genuinely learned Shakespeare-*shaped* structure: character
+names in ALL CAPS followed by a colon (matching the play-script format), plausible verb
+endings, and punctuation patterns — all emergent from raw character prediction, no
+hardcoded rules. Full raw output: [`checkpoints/sample_generation.txt`](checkpoints/sample_generation.txt),
+full per-iteration numbers: [`checkpoints/loss_history.csv`](checkpoints/loss_history.csv).
 
 ## Tradeoffs
-_TBD — will document scale limits (small model, small dataset, CPU/MPS-only) honestly._
+
+- **Character-level tokenization** means the model has to learn spelling from scratch
+  (no subword priors) — part of why output isn't real words yet at this scale/training
+  budget. A production LLM's BPE tokenizer sidesteps this.
+- **824K parameters and 3,000 iterations is tiny** by any real standard (GPT-2 small is
+  124M parameters, trained for far longer) — intentional, since the goal was
+  understanding the mechanism, not chasing benchmark numbers.
+- **Train/val gap** (1.50 vs 1.69) shows mild memorization starting to set in; more
+  data, dropout, or fewer iterations would narrow this, but wasn't the focus here.
+- **Sampling is unconstrained multinomial** (no temperature scaling, no top-k/top-p) —
+  simplest possible decoding strategy, intentionally, to keep focus on the model itself.
 
 ## Link
-_Demo/notebook link coming once built._
+[Full source, `src/train.py` for the training loop, `src/gpt_model.py` for the model class](https://github.com/al-amin/transformer-from-scratch)

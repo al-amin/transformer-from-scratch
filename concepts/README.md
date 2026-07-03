@@ -17,7 +17,13 @@ predicting the next one, and repeats that reasoning a few times before making it
    relevant to predicting what comes next.
 4. **[Feed-Forward layer & Transformer Block](transformer-block.md)** — process each
    word's result a bit further on its own, wrapped in residual connections + layer norm.
-5. **Stack blocks** _(coming)_ — repeat attention + feed-forward several times, each
-   pass refining the model's understanding.
-6. **Next-token prediction** _(coming)_ — turn the final vector back into a probability
-   over every possible next character, and pick (or sample) one.
+5. **[Stacking into a full GPT model](gpt-model.md)** — repeat the block N times, add a
+   final output layer, and sample from it to generate text.
+6. **[Training loop](training-loop.md)** — how the model actually learns from data:
+   loss, optimizer, train/val split.
+
+## Status: complete — real trained model
+An 824,897-parameter version of this exact pipeline was trained end-to-end on Tiny
+Shakespeare and produced genuinely learned (if small-scale) results — see the
+[training loop](training-loop.md) entry and the main [project README](../README.md) for
+real numbers and a real generated sample.
