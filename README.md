@@ -32,6 +32,9 @@ together, processes the result a bit more, and outputs a prediction for the next
 (Diagram is animated in the source SVG — open `docs/architecture-attention-flow.svg`
 directly, or view it on GitHub, to see the data flow in motion.)
 
+**📚 Want the concepts explained one at a time, in plain language, with their own
+diagrams?** See [`concepts/`](concepts/README.md).
+
 ## Metrics
 _TBD once training runs — will report loss curves and sample generations, not just claims._
 
