@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 -80 380 1521" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="concept-transformer-block">
+<style>
+.aups-node { cursor: default; }
+.aups-label {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  dominant-baseline: central;
+  text-anchor: middle;
+  pointer-events: none;
+  letter-spacing: 0.01em;
+}
+.aups-sublabel {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 10px;
+  dominant-baseline: central;
+  text-anchor: middle;
+  fill: rgba(255,255,255,0.75);
+  pointer-events: none;
+}
+.aups-edge { fill: none; }
+.aups-animated { stroke-dasharray: 8 4; animation: aups-flow 0.9s linear infinite; }
+.aups-dash-flow { stroke-dasharray: 18 8; animation: aups-dash-flow 1.1s linear infinite; }
+.aups-pulse { animation: aups-pulse 2.5s ease-in-out infinite; }
+.aups-fade { animation: aups-fade 1.8s ease-in-out infinite; }
+.aups-edge-label {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+.aups-swimlane-label {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: rgba(0,0,0,0.45);
+  dominant-baseline: central;
+}
+/* Semantic edge styles */
+.aups-edge-sync { stroke-width: 2; }
+.aups-edge-async { stroke-dasharray: 8 4; stroke-width: 2; }
+.aups-edge-data-flow { stroke-dasharray: 3 3; stroke-width: 1.5; }
+.aups-edge-monitoring { stroke-dasharray: 8 3 2 3; stroke-width: 1; opacity: 0.6; }
+.aups-edge-event { stroke-dasharray: 5 5; stroke-width: 2; }
+/* Legend styles */
+.aups-legend {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+.aups-legend-title {
+  font-size: 11px; font-weight: 700; fill: #475569;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.aups-legend-text {
+  font-size: 10px; fill: #64748B;
+}
+/* Tooltip styles */
+.aups-tooltip {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.aups-tooltip.visible {
+  opacity: 1;
+}
+
+@keyframes aups-flow {
+  to { stroke-dashoffset: -24; }
+}
+@keyframes aups-dash-flow {
+  to { stroke-dashoffset: -40; }
+}
+@keyframes aups-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px currentColor); opacity: 1; }
+  50% { filter: drop-shadow(0 0 12px currentColor); opacity: 0.85; }
+}
+@keyframes aups-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aups-animated, .aups-dash-flow, .aups-pulse, .aups-fade,
+  .aups-dot { animation: none !important; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .aups-bg { fill: #1a1a2e !important; }
+  .aups-title { fill: #e2e8f0 !important; }
+  .aups-label { fill: #f1f5f9 !important; }
+  .aups-sublabel { fill: rgba(241,245,249,0.7) !important; }
+  .aups-edge-label { fill: #f1f5f9 !important; }
+  .aups-edge-pill { fill: #334155 !important; }
+  .aups-swimlane-label { fill: rgba(255,255,255,0.35) !important; }
+  .aups-swimlane-band { opacity: 0.15 !important; }
+  .aups-legend-title { fill: #94a3b8 !important; }
+  .aups-legend-text { fill: #94a3b8 !important; }
+  .aups-legend-bg { fill: #1e293b !important; stroke: #334155 !important; }
+}
+</style>
+<defs><filter id="node-shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="rgba(0,0,0,0.10)"/></filter><linearGradient id="grad-0" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c7faf0"/><stop offset="100%" stop-color="#99F6E4"/></linearGradient><linearGradient id="grad-1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dcebfe"/><stop offset="100%" stop-color="#BFDBFE"/></linearGradient><marker id="arrowhead-0" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><polygon points="0 0, 8 3, 0 6" fill="#64748B"/></marker></defs>
+<rect class="aups-bg" x="-80" y="-80" width="380" height="1521" fill="#F0F4F8" rx="0"/>
+<text class="aups-title" x="60" y="-52" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="18" font-weight="700" fill="#1E293B" text-anchor="middle" letter-spacing="-0.02em">concept-transformer-block</text>
+
+<g class="aups-edges"><path id="path-e-010603a0-d703-4f1a-bcbc-b92bd4232702" class="aups-edge aups-animated" d="M60,60 C60,110 60,110 60,160" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-010603a0-d703-4f1a-bcbc-b92bd4232702"/></animateMotion></circle><path id="path-e-c6aed169-0b48-4d46-8c65-ae454f40fa8b" class="aups-edge aups-animated" d="M60,220 C60,270 60,270 60,320" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-c6aed169-0b48-4d46-8c65-ae454f40fa8b"/></animateMotion></circle><path id="path-e-6a72c2ed-429a-47d9-a4b2-efec9ff459ac" class="aups-edge aups-animated" d="M60,380 C60,430 60,430 60,480" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-6a72c2ed-429a-47d9-a4b2-efec9ff459ac"/></animateMotion></circle><path class="aups-edge " d="M60,60 C60,270 60,270 60,480" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)"/><rect class="aups-edge-pill" x="27" y="260" width="66" height="18" rx="9" fill="#1E293B" opacity="0.82"/><text class="aups-edge-label" x="60" y="271" fill="#F8FAFC">shortcut</text><path id="path-e-10c84013-75f2-4d6a-b7a4-3b5d6b56956e" class="aups-edge aups-animated" d="M60,540 C60,590 60,590 60,640" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-10c84013-75f2-4d6a-b7a4-3b5d6b56956e"/></animateMotion></circle><path id="path-e-7ac74c5c-dc58-4202-893e-63fb4a11e0fc" class="aups-edge aups-animated" d="M60,700 C60,750 60,750 60,800" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-7ac74c5c-dc58-4202-893e-63fb4a11e0fc"/></animateMotion></circle><path id="path-e-0481aaea-6f17-44b5-b637-3ca0a94b6c88" class="aups-edge aups-animated" d="M60,860 C60,910 60,910 60,960" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-0481aaea-6f17-44b5-b637-3ca0a94b6c88"/></animateMotion></circle><path class="aups-edge " d="M60,540 C60,750 60,750 60,960" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)"/><rect class="aups-edge-pill" x="27" y="740" width="66" height="18" rx="9" fill="#1E293B" opacity="0.82"/><text class="aups-edge-label" x="60" y="751" fill="#F8FAFC">shortcut</text><path id="path-e-c2a2d65f-fa86-4578-b4e3-afc555aa207a" class="aups-edge aups-animated" d="M60,1020 C60,1070 60,1070 60,1120" fill="none" stroke="#64748B" stroke-width="1" marker-end="url(#arrowhead-0)" opacity="0.85"/><circle r="3" fill="#64748B" opacity="0.8"><animateMotion dur="1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#path-e-c2a2d65f-fa86-4578-b4e3-afc555aa207a"/></animateMotion></circle></g>
+<g class="aups-nodes"><g class="aups-node"><rect x="0" y="0" width="120" height="60" rx="14" ry="14" fill="url(#grad-0)" stroke="#0D9488" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="30" fill="#134E4A"><tspan x="60" dy="0">Block input</tspan></text></g><g class="aups-node"><rect x="0" y="160" width="120" height="60" rx="14" ry="14" fill="url(#grad-0)" stroke="#0D9488" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="190" fill="#134E4A"><tspan x="60" dy="0">LayerNorm</tspan></text></g><g class="aups-node"><rect x="0" y="320" width="120" height="60" rx="14" ry="14" fill="url(#grad-0)" stroke="#0D9488" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="342.5" fill="#134E4A"><tspan x="60" dy="0">Multi-Head</tspan><tspan x="60" dy="15">Attention</tspan></text></g><g class="aups-node"><ellipse cx="60" cy="510" rx="60" ry="30" fill="url(#grad-1)" stroke="#2563EB" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="510" fill="#1E3A5F"><tspan x="60" dy="0">Add (+)</tspan></text></g><g class="aups-node"><rect x="0" y="640" width="120" height="60" rx="14" ry="14" fill="url(#grad-0)" stroke="#0D9488" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="670" fill="#134E4A"><tspan x="60" dy="0">LayerNorm</tspan></text></g><g class="aups-node"><rect x="0" y="800" width="120" height="60" rx="14" ry="14" fill="url(#grad-0)" stroke="#0D9488" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="830" fill="#134E4A"><tspan x="60" dy="0">Feed-Forward</tspan></text></g><g class="aups-node"><ellipse cx="60" cy="990" rx="60" ry="30" fill="url(#grad-1)" stroke="#2563EB" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="990" fill="#1E3A5F"><tspan x="60" dy="0">Add (+)</tspan></text></g><g class="aups-node"><rect x="0" y="1120" width="120" height="60" rx="14" ry="14" fill="url(#grad-0)" stroke="#0D9488" stroke-width="1" filter="url(#node-shadow)"/><text class="aups-label" x="60" y="1150" fill="#134E4A"><tspan x="60" dy="0">Block output</tspan></text></g></g>
+</svg>

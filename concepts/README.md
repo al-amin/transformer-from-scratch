@@ -15,7 +15,8 @@ predicting the next one, and repeats that reasoning a few times before making it
    both *meaning* (what the character is) and *order* (where it sits in the sequence).
 3. **[Attention](attention.md)** — for each word, decide which earlier words are most
    relevant to predicting what comes next.
-4. **Feed-Forward layer** _(coming)_ — process each word's result a bit further on its own.
+4. **[Feed-Forward layer & Transformer Block](transformer-block.md)** — process each
+   word's result a bit further on its own, wrapped in residual connections + layer norm.
 5. **Stack blocks** _(coming)_ — repeat attention + feed-forward several times, each
    pass refining the model's understanding.
 6. **Next-token prediction** _(coming)_ — turn the final vector back into a probability
